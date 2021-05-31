@@ -1,0 +1,538 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto:ital,wght@0,400;1,100&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6rem;
+    height: 100%;
+    position: relative;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffff;
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    margin: auto;
+    outline: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    font-weight: 500;
+    border: none;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+/* ===== Nav - Header ====*/
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #4f720e;
+    box-sizing: border-box;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    margin-left: auto;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1024px;
+    padding: 0.5rem 0;
+    color: #ffffff;
+    align-items: center;
+
+}
+
+.logo {
+    width: 200px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo a {
+    font-family: 'Playfair';
+    font-size: 1.8rem;
+}
+
+.logo img {
+    width: 32px;
+    color: #ffff;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.menu-items a {
+    color: #ffffff;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.menu-items a:hover {
+
+    background: rgba(0, 0, 0, 0.05);
+    transition: 0.5 ease-in-out linear;
+
+}
+
+.openMenu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+
+}
+
+.one,
+.two,
+.tree {
+    width: 25px;
+    height: 2px;
+    background: #ffff;
+    margin-top: 0.4rem;
+    transition: 0.3s;
+    position: relative;
+}
+
+/*===== Home =====*/
+
+.background-home {
+    height: 100vh;
+    width: 100%;
+
+}
+
+.background-home .text-medium {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.33);
+    width: 100%;
+    height: 100vh;
+    padding: 11rem 9rem;
+    z-index: 1;
+}
+
+.text-medium h2 {
+    margin-top: 120px;
+    color: #ffffff;
+    font-weight: 700;
+    font-family: 'Playfair';
+    font-size: 3.5rem;
+    line-height: 4rem;
+
+}
+
+.text-medium .button {
+    width: 200px;
+    height: 50px;
+    margin-top: 30px;
+    background-color: #263805;
+    border: none;
+    color: #ffff;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.button:hover {
+    background-color: #ffffff;
+    color: #263805;
+}
+
+.background-home video {
+    object-fit: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.background-home source {
+    width: 100%;
+    height: fit-content;
+}
+
+/*===== Cardápio Flex-box=====*/
+
+.main-galeria {
+    text-align: center;
+    min-height: 90vh;
+    padding: 9rem 0;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 980px;
+    margin: 0 auto;
+    padding-top: 3rem;
+    gap: 30px;
+    justify-content: center;
+}
+
+.content {
+    flex: 0.5 0.5 250px;
+    height: 220px;
+    margin-bottom: 1rem;
+    padding: 2rem 2rem 4rem 2rem;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.content img {
+    width: 100%;
+}
+
+.content p {
+    padding-top: 1.2rem;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+/*===== Exercícios =====*/
+
+.main-exercises {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    padding: 9rem 0;
+}
+
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    max-width: 980px;
+    width: 100%;
+    gap: 20px;
+    margin-top: 4rem;
+}
+
+.container-grid>div:nth-child(n+4) {
+    display: grid;
+    grid-template-columns: (auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 1rem;
+
+}
+
+.container-grid .video {
+    height: 220px;
+
+}
+
+.container-grid .video iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.container-grid .content-anuncio {
+    grid-column: 1;
+    grid-row: 2/5;
+    display: block;
+
+
+}
+
+/* === Professionals === */
+
+.container-professional {
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 90vh;
+    margin: 0 auto;
+    padding: 9rem 0 11rem 0;
+}
+
+.slides {
+    display: flex;
+    max-width: 980px;
+    width: 100%;
+    gap: 30px;
+    margin-top: 4rem;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+
+.container-professional .box {
+    min-height: 410px;
+    width: 280px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box img {
+    height: 40%;
+    width: 80%;
+    text-align: center;
+    margin-bottom: 1.6rem;
+}
+
+.details {
+    padding: 1rem;
+}
+
+.details p {
+    margin-top: 1rem;
+    color: rgba(0, 0, 0, 0.45);
+}
+
+.box button {
+    background: #76b462;
+    padding: 1rem 2rem;
+    margin: auto;
+    color: #ffff;
+    text-transform: uppercase;
+    border-radius: 2px;
+
+}
+
+.footer {
+    background: #4f720e;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 90px;
+    display: flex;
+    justify-content: center;
+}
+
+.container_footer {
+    max-width: 1024px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    color: #ffffff;
+    margin: 0;
+    flex-wrap: wrap;
+    height: 90px;
+}
+
+.footer .redes {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+
+}
+
+.footer img {
+    width: 20px;
+}
+
+.copy {
+
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    
+}
+
+.contato {
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.contato p {
+    font-weight: 200;
+}
+
+
+
+/* === Medias Queries Mobile === */
+
+
+@media (max-width:1024px) {
+
+    .main-galeria {
+        padding: 8rem;
+    }
+
+    .main-exercises {
+        padding: 9rem 5rem;
+        display: block;
+
+    }
+
+    .container-grid .video {
+        height: 300px;
+
+    }
+
+    .container-grid .content-anuncio {
+        grid-column: auto;
+        grid-row: auto;
+
+    }
+
+}
+
+@media (max-width:880px) {
+
+    .main-galeria {
+        padding: 10rem;
+    }
+
+    .background-home .text-medium {
+        padding: 15rem 6rem;
+    }
+}
+
+@media (max-width:726px) {
+
+    .openMenu {
+        display: block;
+        position: absolute;
+        right: 40px;
+        top: 20px;
+    }
+
+    .menu-items {
+        display: block;
+        position: absolute;
+        top: 70px;
+        right: 0px;
+
+        width: 100%;
+        height: calc(100vh - 70px);
+
+        padding-top: 2rem;
+        background: #7aaf16;
+        z-index: 1;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .menu-section.active .menu-items {
+        display: block;
+        text-align: center;
+        visibility: visible;
+        overflow-y: auto;
+    }
+
+    .menu-items a {
+        padding: 2rem 0;
+    }
+
+    .menu-section.active .one {
+        background: none;
+    }
+
+    .menu-section.active .two {
+        transform: rotate(135deg);
+    }
+
+    .menu-section.active .tree {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    .main-galeria {
+        padding: 10rem 3rem;
+    }
+
+
+}
+
+@media (max-width:614px) {
+
+    .background-home .text-medium {
+        text-align: center;
+        padding: 8rem 1rem;
+    }
+
+    .text-medium h2 {
+        margin-top: 140px;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+
+    .copy {
+        order: 1;
+        text-align: center;
+       
+    }
+
+}
+
+@media(max-width:580px) {
+
+    .main-galeria {
+        padding: 9rem 5.3rem;
+    }
+
+    .main-exercises {
+        padding: 9rem 2rem;
+    }
+
+    .container_footer {
+        gap: 15px;
+        height: auto;
+        padding: 1rem 0;
+    }
+
+
+
+}
